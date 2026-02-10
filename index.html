@@ -1,146 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>User Registration</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="UTF-8">
+ <title>User Registration</title>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+
+ <link
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+   rel="stylesheet"
+ >
 </head>
 <body class="bg-light">
 
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
 
-        <div class="card shadow">
-          <div class="card-body">
-            <h3 class="card-title text-center mb-4">User Registration</h3>
+ <div class="container mt-5">
+   <div class="row justify-content-center">
+     <div class="col-md-6">
 
-            <form>
-              <!-- First Name -->
-              <div class="mb-3">
-                <label class="form-label">First Name</label>
-                <input type="text" class="form-control" required>
-              </div>
 
-              <!-- Last Name -->
-              <div class="mb-3">
-                <label class="form-label">Last Name</label>
-                <input type="text" class="form-control" required>
-              </div>
+       <div class="card shadow">
+         <div class="card-body">
+           <h3 class="card-title text-center mb-4">User Registration</h3>
 
-              <!-- Email -->
-              <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" required>
-              </div>
 
-              <!-- Password -->
-              <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" class="form-control" required>
-              </div>
+           <form>
+             <!-- First Name -->
+             <div class="mb-3">
+               <label class="form-label">First Name</label>
+               <input type="text" class="form-control" required>
+             </div>
 
-              <!-- Select Menu -->
-              <div class="mb-3">
-                <label class="form-label">Country</label>
-                <select class="form-select" required>
-                  <option value="">Select your country</option>
-                  <option>USA</option>
-                  <option>Canada</option>
-                  <option>UK</option>
-                  <option>Australia</option>
-                </select>
-              </div>
 
-              <!-- Radio Buttons -->
-              <div class="mb-3">
-                <label class="form-label d-block">Account Type</label>
+             <!-- Last Name -->
+             <div class="mb-3">
+               <label class="form-label">Last Name</label>
+               <input type="text" class="form-control" required>
+             </div>
 
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="accountType" required>
-                  <label class="form-check-label">Standard</label>
-                </div>
 
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="accountType">
-                  <label class="form-check-label">Premium</label>
-                </div>
-              </div>
+             <!-- Email -->
+             <div class="mb-3">
+               <label class="form-label">Email</label>
+               <input type="email" class="form-control" required>
+             </div>
 
-              <!-- Text Area -->
-              <div class="mb-3">
-                <label class="form-label">About You</label>
-                <textarea class="form-control" rows="4" placeholder="Tell us a little about yourself..."></textarea>
-              </div>
 
-              <button type="submit" class="btn btn-primary w-100 mb-3">
-                Register
-              </button>
-              
-              <button type="submit" class="btn btn-danger w-100">
-                Reset
-              </button>
-            </form>
+             <!-- Password -->
+             <div class="mb-3">
+               <label class="form-label">Password</label>
+               <input type="password" class="form-control" required>
+             </div>
 
-          </div>
-        </div>
 
-      </div>
-    </div>
-  </div>
-  <!-- Saved User Display -->
+             <!-- Select Menu -->
+             <div class="mb-3">
+               <label class="form-label">Country</label>
+               <select class="form-select" required>
+                 <option value="">Select your country</option>
+                 <option>USA</option>
+                 <option>Canada</option>
+                 <option>UK</option>
+                 <option>Australia</option>
+               </select>
+             </div>
+
+
+             <!-- Radio Buttons -->
+             <div class="mb-3">
+               <label class="form-label d-block">Account Type</label>
+
+
+               <div class="form-check form-check-inline">
+                 <input class="form-check-input" type="radio" name="accountType" required>
+                 <label class="form-check-label">Standard</label>
+               </div>
+
+
+               <div class="form-check form-check-inline">
+                 <input class="form-check-input" type="radio" name="accountType">
+                 <label class="form-check-label">Premium</label>
+               </div>
+             </div>
+
+
+             <!-- Text Area -->
+             <div class="mb-3">
+               <label class="form-label">About You</label>
+               <textarea class="form-control" rows="4" placeholder="Tell us a little about yourself..."></textarea>
+             </div>
+
+
+             <button type="submit" class="btn btn-primary w-100 mb-3">
+               Register
+             </button>
+            
+             <button type="reset" class="btn btn-danger w-100">
+               Reset
+             </button>
+           </form>
+
+
+         </div>
+       </div>
+
+
+     </div>
+   </div>
+ </div>
+ <!-- Saved User Display -->
 <div class="card shadow mt-4">
-  <div class="card-body">
-    <h4 class="card-title text-center mb-3">Saved Registration</h4>
+ <div class="card-body">
+   <h4 class="card-title text-center mb-3">Saved Registration</h4>
 
-    <!-- Message shown when nothing is saved -->
-    <div id="noSavedUser" class="alert alert-warning mb-3">
-      No saved user found in LocalStorage.
-    </div>
 
-    <!-- Saved info panel -->
-    <div id="savedUserPanel" class="d-none">
-      <ul class="list-group mb-3">
-        <li class="list-group-item">
-          <strong>First Name:</strong> <span id="savedFirstName">-</span>
-        </li>
-        <li class="list-group-item">
-          <strong>Last Name:</strong> <span id="savedLastName">-</span>
-        </li>
-        <li class="list-group-item">
-          <strong>Email:</strong> <span id="savedEmail">-</span>
-        </li>
-        <li class="list-group-item">
-          <strong>Country:</strong> <span id="savedCountry">-</span>
-        </li>
-        <li class="list-group-item">
-          <strong>Account Type:</strong> <span id="savedAccountType">-</span>
-        </li>
-        <li class="list-group-item">
-          <strong>About You:</strong> <span id="savedAbout">-</span>
-        </li>
-      </ul>
+   <!-- Message shown when nothing is saved -->
+   <div id="noSavedUser" class="alert alert-warning mb-3">
+     No saved user found in LocalStorage.
+   </div>
 
-      <div class="d-grid gap-2">
-        <button id="loadUserBtn" type="button" class="btn btn-outline-primary">
-          Load Saved User
-        </button>
 
-        <button id="clearUserBtn" type="button" class="btn btn-outline-danger">
-          Clear Saved User
-        </button>
-      </div>
-    </div>
-  </div>
+   <!-- Saved info panel -->
+   <div id="savedUserPanel" class="d-none">
+     <ul class="list-group mb-3">
+       <li class="list-group-item">
+         <strong>First Name:</strong> <span id="savedFirstName">-</span>
+       </li>
+       <li class="list-group-item">
+         <strong>Last Name:</strong> <span id="savedLastName">-</span>
+       </li>
+       <li class="list-group-item">
+         <strong>Email:</strong> <span id="savedEmail">-</span>
+       </li>
+       <li class="list-group-item">
+         <strong>Country:</strong> <span id="savedCountry">-</span>
+       </li>
+       <li class="list-group-item">
+         <strong>Account Type:</strong> <span id="savedAccountType">-</span>
+       </li>
+       <li class="list-group-item">
+         <strong>About You:</strong> <span id="savedAbout">-</span>
+       </li>
+     </ul>
+
+
+     <div class="d-grid gap-2">
+       <button id="loadUserBtn" type="button" class="btn btn-outline-primary">
+         Load Saved User
+       </button>
+
+
+       <button id="clearUserBtn" type="button" class="btn btn-outline-danger">
+         Clear Saved User
+       </button>
+     </div>
+   </div>
+ </div>
 </div>
 
+
 <div class="mb-6" style="margin-bottom: 50px;">&nbsp;</div>
-  <script src="src/js/script.js"></script>
+ <script src="src/js/script.js"></script>
 </body>
 </html>
+
 
